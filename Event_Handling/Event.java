@@ -1,21 +1,19 @@
-package evtest;
-
 import java.util.Calendar;
 
 public class Event {
     // Variable Declarations
-    protected int id;
-    protected String name, notes;
+    private double id;
+    private String name, notes;
     protected Calendar eStart, eEnd;
-    protected Boolean isMilestone;
-    protected int dependancy, duration;
+    private Boolean isMilestone;
+    private int dependancy, duration;
     
-    public Event(int i, String na, int[] st, int[] en, String no, Boolean mile, int dep, int dur)
+    public Event(double i, String na, int[] st, int[] en, String no, Boolean mile, int dep, int dur)
     {
         /*
-            Lines 19 & 20: Instaniate Calendar objects
-            Lines 21 & 22: Set the date of the Calendar objects
-            Lines: 24 - 27: Set variable values from contructor arguments
+            Instaniate Calendar objects
+            Set the date of the Calendar objects
+            Set variable values from contructor arguments
         */
         id = i;
         eStart = Calendar.getInstance();
@@ -64,8 +62,12 @@ public class Event {
     {
         return dependancy;
     }
-    
-    public void setID(int i)
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setID(double i)
     {
         id = i;
     }
