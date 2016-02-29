@@ -23,7 +23,7 @@ public class Main {
         project1.addEvent(event2);
         System.out.println(project1.getSize());
         project1.getEventList().stream().forEach((e) -> {
-            System.out.println("Event Name: " + e.name + " Year: " + e.eStart.get(1) + " Month: " + e.eStart.get(2) + " Day: " + e.eStart.get(5));
+            System.out.println("ID:: " + e.id + "Event Name: " + e.name + " Year: " + e.eStart.get(1) + " Month: " + e.eStart.get(2) + " Day: " + e.eStart.get(5));
         }); 
         */
     }
