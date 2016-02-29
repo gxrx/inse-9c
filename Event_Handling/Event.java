@@ -4,18 +4,20 @@ import java.util.Calendar;
 
 public class Event {
     // Variable Declarations
+    protected int id;
     protected String name, notes;
     protected Calendar eStart, eEnd;
     protected Boolean isMilestone;
     protected int dependancy, duration;
     
-    public Event(String na, int[] st, int[] en, String no, Boolean mile, int dep, int dur)
+    public Event(int i, String na, int[] st, int[] en, String no, Boolean mile, int dep, int dur)
     {
         /*
             Lines 19 & 20: Instaniate Calendar objects
             Lines 21 & 22: Set the date of the Calendar objects
             Lines: 24 - 27: Set variable values from contructor arguments
         */
+        id = i;
         eStart = Calendar.getInstance();
         eEnd = Calendar.getInstance();
         eStart.set(st[0], st[1], st[2]); 
@@ -28,6 +30,11 @@ public class Event {
     }
     
     // Getters & Setters
+    public int getID()
+    {
+        return id;
+    }
+    
     public String getEventName()
     {
         return name;
@@ -56,6 +63,11 @@ public class Event {
     public int getEventDependancy()
     {
         return dependancy;
+    }
+    
+    public void setID(int i)
+    {
+        id = i;
     }
     
     public void setEventName(String na)
