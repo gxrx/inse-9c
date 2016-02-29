@@ -39,5 +39,28 @@ public class Project {
     {
         return eventList;
     }
+    
+     public void addEvent(){
+        checkDuplicate(double inputID);
+        //add the event
+    }
+    
+    //checks for a duplcate Event ID. returns false if there is. 
+    public boolean checkDuplicate(double inputID){
+        for(Event e: eventList)
+        {
+            if (inputID = e.getID())
+            {
+            return false;
+            }
+            else {
+                return true;
+            }
+        }
+    }
+    
+    
+    
+    
 
 }
