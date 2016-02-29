@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="175.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+   <bottom>
+      <Pane prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" text="Label" />
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+      <BorderPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <Label text="Username" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Button mnemonicParsing="false" text="New Project" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0" />
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <content>
+                  <ImageView fitHeight="238.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</BorderPane>
