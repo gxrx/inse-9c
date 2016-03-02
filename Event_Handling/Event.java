@@ -107,4 +107,11 @@ public class Event {
         dependancy.add(dep);
     }  
     
+    public void setDuration(int dur)
+    {
+        duration = dur;
+    }
+    
+    
+    
 }
