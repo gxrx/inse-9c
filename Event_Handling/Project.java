@@ -53,10 +53,13 @@ public class Project {
             {
             return false;
             }
-            else {
-                return true;
-            }
         }
+            return true;
+        }
+        
+        
+        
+        
     }
     
     
