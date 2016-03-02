@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Event {
     // Variable Declarations
@@ -6,9 +8,9 @@ public class Event {
     private String name, notes;
     protected Calendar eStart, eEnd;
     private Boolean isMilestone;
-    private int dependancy, duration;
-    
-    public Event(double i, String na, int[] st, int[] en, String no, Boolean mile, int dep, int dur)
+    private int duration;
+    List<Double> dependancy = new ArrayList<Double>();
+    public Event(double i, String na, int[] st, int[] en, String no, Boolean mile,int dur)
     {
         /*
             Instaniate Calendar objects
@@ -22,13 +24,12 @@ public class Event {
         eEnd.set(en[0], en[1], en[2]);
         name = na;
         notes = no;
-        isMilestone = mile;
-        dependancy = dep;   
+        isMilestone = mile;   
         duration = dur;
     }
     
     // Getters & Setters
-    public int getID()
+    public double getID()
     {
         return id;
     }
@@ -58,10 +59,10 @@ public class Event {
         return isMilestone;         
     }
     
-    public int getEventDependancy()
+    /*public int getEventDependancy()
     {
         return dependancy;
-    }
+    }*/
 
     public int getDuration() {
         return duration;
@@ -97,8 +98,9 @@ public class Event {
         isMilestone = mile;
     }
     
-    public void setDependancy(int dep)
+   /* public void setDependancy(int dep)
     {
         dependancy = dep;
-    }          
+    }  
+    */
 }
