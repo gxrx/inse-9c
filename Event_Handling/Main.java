@@ -1,36 +1,60 @@
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
-public class Main {
+public class Project {
 
-    public static void main(String[] args) {
-        ArrayList<Event> data = new ArrayList();
-        int[] p = {2000,3,4};
-        int[] y = {4,5,5};
-        data.add(new Event(1.0, "Event 1", p, y, "Notes", true, 0, 1));
-        data.add(new Event(2.0, "Event 2", p, y, "More Notes", false, 1, 1));
-        for(Event e : data)
-        {
-            System.out.println("Event Name: " + e.getEventName()); // + " Year: " + e.getEventStart() + " Month: " + e.getEventEnd() + " Day: " + e.eStart.get(5));
+    // Variabe Declarations
+    protected String name;
+    protected Calendar eStart, eEnd;
+    protected ArrayList<Event> eventList = new ArrayList<>();
+
+    //constructor
+    public Project(String na, int[] st, int[] en) {
+        eStart = Calendar.getInstance();
+        eEnd = Calendar.getInstance();
+        eStart.set(st[0], st[1], st[2]);
+        eEnd.set(en[0], en[1], en[2]);
+        name = na;
+
+    }
+
+// Class Methods   
+    public void addEvent(Event event) {
+        eventList.add(event);
+    }
+
+    public Event returnEvent(int n) {
+        return eventList.get(n);
+    }
+
+    public void removeEvent(int n) {
+        eventList.remove(n);
+    }
+
+    public int getSize() {
+        return eventList.size();
+    }
+
+    public ArrayList<Event> getEventList() {
+        return eventList;
+    }
+
+    public void addEvent(double inputID) {
+        checkDuplicate(inputID);
+        //add the event
+    }
+
+    //checks for a duplcate Event ID. returns false if there is. 
+    public boolean checkDuplicate(double inputID) {
+        String stringInputID = String.valueOf(inputID);
+        String eventlistID = "";
+        for (Event e : eventList) {
+            eventlistID = String.valueOf(e.getID());
+            if (stringInputID.equals(eventlistID)) {
+                return false;
+            }
         }
-     
-        System.out.println("TESTING PROJECT");
-        Project project1 = new Project("project1", p ,y);
-        Event event1 = new Event(1.0, "Event 1", p, y, "Notes", true, 0, 1);
-        Event event2 = new Event(2.0, "Event 2", p, y, "More Notes", false, 1, 1);
-        project1.addEvent(event1);
-        project1.addEvent(event2);
-        System.out.println(project1.getSize());
-        project1.getEventList().stream().forEach((e) -> {
-            System.out.println("ID:: " + e.getID() + "Event Name: " + e.getEventName()); // + " Year: " + e.eStart.get(1) + " Month: " + e.eStart.get(2) + " Day: " + e.eStart.get(5));
-        });
-        //testing Project.checkDuplicate(id)
-        System.out.println(project1.checkDuplicate(1.0)); // should print false
-        System.out.println(project1.checkDuplicate(2.0)); // should print false
-        System.out.println(project1.checkDuplicate(3.0)); // should print true
+        return true;
     }
-    
-    
-
-    }
-
+}
