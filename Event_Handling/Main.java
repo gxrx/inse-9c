@@ -25,9 +25,9 @@ public class Main {
             System.out.println("ID:: " + e.getID() + "Event Name: " + e.getEventName()); // + " Year: " + e.eStart.get(1) + " Month: " + e.eStart.get(2) + " Day: " + e.eStart.get(5));
         });
         //testing Project.checkDuplicate(id)
-        System.out.println(project1.checkDuplicate(1.0));
-        System.out.println(project1.checkDuplicate(2.0));
-        System.out.println(project1.checkDuplicate(3.0));
+        System.out.println(project1.checkDuplicate(1.0)); // should print false
+        System.out.println(project1.checkDuplicate(2.0)); // should print false
+        System.out.println(project1.checkDuplicate(3.0)); // should print true
     }
     
     
