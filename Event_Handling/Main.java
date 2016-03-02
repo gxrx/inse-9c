@@ -22,11 +22,29 @@ public class Main {
         System.out.println(project1.getSize());
         project1.getEventList().stream().forEach((e) -> {
             System.out.println("ID:: " + e.getID() + "Event Name: " + e.getEventName()); // + " Year: " + e.eStart.get(1) + " Month: " + e.eStart.get(2) + " Day: " + e.eStart.get(5));
-        });//testing Project.checkDuplicate(id)
+        });
+
+//testing Project.checkDuplicate(id)
         System.out.println(project1.checkDuplicate(1.0)); //false
         System.out.println(project1.checkDuplicate(1.1));
         System.out.println(project1.checkDuplicate(2.0)); //false
         System.out.println(project1.checkDuplicate(3.0));
+        
+        //testing adding duplicate events.
+        Project project3 = new Project("project 3,", p, y);
+        Event event4 = new Event(2.0, "Event 2", p, y, "More Notes", false, 1);
+        Event event5 = new Event(2.0, "Event 2", p, y, "More Notes", false, 1);
+        Event event6 = new Event(6.0, "Event 2", p, y, "More Notes", false, 1);
+        project3.addEvent(2.0, event4);
+        System.out.println(project3.getSize()); // expected 1
+        project3.addEvent(2.0, event5);
+        System.out.println(project3.getSize()); // expected 1
+        project3.addEvent(6.0, event6);
+        System.out.println(project3.getSize()); // expected 2
+        
+        
+        
+        
     }
     }
 
