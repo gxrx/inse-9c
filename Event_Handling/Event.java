@@ -59,10 +59,14 @@ public class Event {
         return isMilestone;         
     }
     
-    /*public int getEventDependancy()
+    //print all of the dependanies. change to return actuall stuff later.
+    public void getEventDependancy()
     {
-        return dependancy;
-    }*/
+       for (Double d : dependancy)
+       {
+           System.out.println(d);
+       }
+    }
 
     public int getDuration() {
         return duration;
@@ -98,9 +102,9 @@ public class Event {
         isMilestone = mile;
     }
     
-   /* public void setDependancy(int dep)
+    public void setDependancy(double dep)
     {
-        dependancy = dep;
+        dependancy.add(dep);
     }  
-    */
+    
 }
